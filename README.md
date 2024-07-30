@@ -1,4 +1,7 @@
 # RMCL
+# 你谷之巅
+## ~~建议~~强制使用[小熊猫C++ （密码：f0tp）](https://wwe.lanzoui.com/b01os0mwd)
+
 Minecraft 启动器
 
 >洛谷上纯$Cpp$的$Minecraft$启动器巅峰
@@ -7,12 +10,8 @@ Minecraft 启动器
 
 制作者
 
-$liyifan202201$ 
+liyifan202201
 
-$GSCG01$
+GSCG01
 
-$RMCL$ $1.0$
 
-！: 必须要使用 **小熊猫c++** 才能正常使用，或者手动链接 **raylib.h** 这个 gui 库
-
-[小熊猫C++](https://royqh.net/redpandacpp/)
