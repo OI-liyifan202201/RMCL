@@ -4,7 +4,7 @@
 
 Minecraft 启动器
 
->洛谷上纯$Cpp$的$Minecraft$启动器巅峰
+>洛谷上纯 Cpp 的 Minecraft 启动器巅峰
 
 团队：方块工作室
 
