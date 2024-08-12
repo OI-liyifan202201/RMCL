@@ -156,7 +156,7 @@ void install_minecraft(){
 }
 void launch_minecraft(){
 	ofstream fout;
-	fout.open("c:\\RMCL\\la.bat");
+	fout.open("C:\\RMCL\\la.bat");
 	fout<<"cd /d C:\\RMCL & (echo yy | cmcl 1.20.1) & exit";
 	fout.close();
 	cout<<"Start Mc!";
@@ -188,6 +188,7 @@ int main() {
 	
 	launch_minecraft();
 	// 启动动画
+	int STime=time(0);
 	while (PG <= 120) {
 		
 		if(WindowShouldClose()){
@@ -205,8 +206,6 @@ int main() {
 			PG++;
 			continue;
 		} 
-		
-		
 		// 显示RMCL文本和进度条1秒
 		if (PG <= 120) {
 			BeginDrawing();
@@ -225,7 +224,10 @@ int main() {
 		else{
 			winapi::HWND mc=Get_HWND("Minecraft");
 			while(mc==NULL){
-				
+				if(time(0)-STime>=10){
+					system("rd C:\\RMCL\\.minecraft\\");
+					break;
+				}
 				if(WindowShouldClose()){
 					system("taskkill /f /im consolepauser.exe");
 					exit(0);
