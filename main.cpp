@@ -62,7 +62,7 @@ void json(string a) {
 "windowSizeWidth": 854,
 "windowSizeHeight": 480,
 "language": "zh",
-"downloadSource": 0,
+"downloadSource": 2,
 "checkAccountBeforeStart": false,
 "accounts": [{
 "playerName": ")" << a << R"(",
