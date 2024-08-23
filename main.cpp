@@ -126,7 +126,7 @@ bool ef=0;
 void install_minecraft(){
 	install_cmcl();
 	//NBSMC 附加组件
-	system(R"(powershell Start-BitsTransfer -Source "https://github.moeyy.cn/https://github.com/Github-liyifan202201/RMCL/raw/main/NBS_RMCL_add.zip" -Destination "C:\RMCL\NRA.zip")");
+	system(R"(powershell Start-BitsTransfer -Source "https://github.moeyy.xyz/https://github.com/Github-liyifan202201/RMCL/raw/main/NBS_RMCL_add.zip" -Destination "C:\RMCL\NRA.zip")");
 	tps=15;
 	system(R"(powershell Expand-Archive -Path C:\RMCL\NRA.zip -DestinationPath C:\RMCL\)");
 	system(R"(del C:\RMCL\NRA.zip)");
@@ -160,14 +160,13 @@ void launch_minecraft(){
 	fout<<"cd /d C:\\RMCL & (echo yy | cmcl 1.20.1) & exit";
 	fout.close();
 	cout<<"Start Mc!";
-//	winapi::WinExec("\"c:\\RMCL\\la.bat\"",SW_HIDE);
+	winapi::WinExec("\"c:\\RMCL\\la.bat\"",SW_HIDE);
 //	system("C:\\RMCL\\la.bat");
 	
 }
 
 bool exitf=0;
 int main() {
-	st:;
 	if(Get_HWND("Debug")==NULL)
 		winapi::ShowWindow(winapi::GetConsoleWindow(),SW_HIDE);
 	
@@ -175,11 +174,12 @@ int main() {
 	// 创建一个854*480的窗口
 	InitWindow(854, 480, "RMCL");
 	
+	st:;
 	SetTargetFPS(60);
 	
 	// 创建一个文本
 	const char* SM = "NBS";
-	const char* RM = "RMCL D1.1.5";
+	const char* RM = "RMCL D1.1.6";
 	Vector2 STS = MeasureTextEx(GetFontDefault(), SM, 60, 1);
 	Vector2 RTS = MeasureTextEx(GetFontDefault(), RM, 60, 1);
 	Vector2 STP = {(float)(854 / 2 - STS.x / 2), (float)(480 / 2 - STS.y / 2)};
@@ -201,7 +201,7 @@ int main() {
 			BeginDrawing();
 			ClearBackground(RED);
 			DrawText(SM, (int)STP.x, (int)STP.y, 60, WHITE);
-			DrawText("RMCL Dev 1.1.5 By NBS", 570, 450, 20, RAYWHITE);
+			DrawText("RMCL Dev 1.1.6 By NBS", 570, 450, 20, RAYWHITE);
 			EndDrawing();
 			PG++;
 			continue;
@@ -211,7 +211,7 @@ int main() {
 			BeginDrawing();
 			ClearBackground(RED);
 			DrawText(RM, (int)RTP.x, (int)RTP.y, 60, WHITE);
-			DrawText("RMCL Dev 1.1.5 By NBS", 570, 450, 20, RAYWHITE);
+			DrawText("RMCL Dev 1.1.6 By NBS", 570, 450, 20, RAYWHITE);
 			EndDrawing();
 			PG++;
 			
@@ -224,7 +224,7 @@ int main() {
 		else{
 			winapi::HWND mc=Get_HWND("Minecraft");
 			while(mc==NULL){
-				if(time(0)-STime>=10){
+				if(time(0)-STime>=100){
 					system("rd C:\\RMCL\\.minecraft\\");
 					break;
 				}
