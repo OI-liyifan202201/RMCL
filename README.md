@@ -2,7 +2,7 @@
 # 你谷之巅
 ## ~~建议~~强制使用[小熊猫C++ （密码：f0tp）](https://wwe.lanzoui.com/b01os0mwd)
 
-**置顶：马上更新 1.21 版本！**
+内核：[CMCL2](https://github.com/MrShieh-X/console-minecraft-launcher/)
 
 Minecraft 启动器
 
